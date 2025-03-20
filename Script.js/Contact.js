@@ -1,6 +1,5 @@
 class Contact {
     constructor(firstName, lastName, address, city, state, zip, phone, email) {
-        // Validating inputs using helper functions
         this.firstName = this.validateName(firstName, "First Name");
         this.lastName = this.validateName(lastName, "Last Name");
         this.address = this.validateAddress(address, "Address");
@@ -27,7 +26,7 @@ class Contact {
     }
 
     validateZip(zip) {
-        let zipPattern = /^\d{6}$/; // Example: 560001
+        let zipPattern = /^\d{6}$/;
         if (!zipPattern.test(zip)) {
             throw new Error("Zip code must be a 6-digit number.");
         }
@@ -35,7 +34,7 @@ class Contact {
     }
 
     validatePhone(phone) {
-        let phonePattern = /^[6-9]\d{9}$/; // Example: 9876543210
+        let phonePattern = /^[6-9]\d{9}$/;
         if (!phonePattern.test(phone)) {
             throw new Error("Phone number must be 10 digits and start with 6-9.");
         }
@@ -54,22 +53,5 @@ class Contact {
         return `${this.firstName} ${this.lastName}, ${this.address}, ${this.city}, ${this.state} - ${this.zip}, Phone: ${this.phone}, Email: ${this.email}`;
     }
 }
-//  Example with valid data (No error)
-try {
-    const validContact = new Contact("John", "Doe", "123 Main St", "New York", "New York", "100001", "9876543210", "john@example.com");
-    console.log("✔ Valid Contact Created:");
-    console.log(validContact.display());
-} catch (error) {
-    console.error(" Error:", error.message);
-}
 
-console.log("\n-----------------------------------\n");
-
-//  Example with invalid data (Triggers an error)
-try {
-    const invalidContact = new Contact("Jo", "Do", "12 St", "NY", "NY", "100", "123456", "john@.com");
-    console.log("✔ Invalid Contact Created:");
-    console.log(invalidContact.display());
-} catch (error) {
-    console.error(" Error:", error.message);
-}
+module.exports = Contact;
