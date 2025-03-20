@@ -13,8 +13,8 @@ myAddressBook.addContact(contact3);
 
 myAddressBook.displayContacts();
 
-// View persons by City
-myAddressBook.viewPersonsByCity("Delhi");
+// Count persons by City
+myAddressBook.countPersonsByCity("Delhi");
 
-// View persons by State
-myAddressBook.viewPersonsByState("Maharashtra");
+// Count persons by State
+myAddressBook.countPersonsByState("Maharashtra");
