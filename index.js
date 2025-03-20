@@ -11,7 +11,5 @@ myAddressBook.addContact(contact2);
 
 myAddressBook.displayContacts();
 
-// Deleting Contact
-myAddressBook.deleteContact("Ayushi");
-
-myAddressBook.displayContacts();
+// Count Contacts using reduce()
+myAddressBook.countContacts();
