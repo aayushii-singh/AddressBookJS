@@ -5,11 +5,16 @@ const myAddressBook = new AddressBook();
 
 const contact1 = new Contact("Ayushi", "Singh", "123 MG Road", "Delhi", "Delhi", "110001", "9876543210", "ayushi@example.com");
 const contact2 = new Contact("Ashutosh", "Sharma", "456 Lajpat Nagar", "Mumbai", "Maharashtra", "400001", "9876543211", "ashutosh@example.com");
-const duplicateContact = new Contact("Ayushi", "Singh", "789 Andheri", "Mumbai", "Maharashtra", "400002", "9876543212", "ayushi2@example.com");
+const contact3 = new Contact("Rahul", "Verma", "789 Connaught Place", "Delhi", "Delhi", "110002", "9876543212", "rahul@example.com");
 
 myAddressBook.addContact(contact1);
 myAddressBook.addContact(contact2);
-myAddressBook.addContact(duplicateContact); // This should be rejected
+myAddressBook.addContact(contact3);
 
 myAddressBook.displayContacts();
-myAddressBook.countContacts();
+
+// Search for contacts in Delhi
+myAddressBook.searchByCity("Delhi");
+
+// Search for contacts in Maharashtra
+myAddressBook.searchByState("Maharashtra");
