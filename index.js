@@ -13,8 +13,8 @@ myAddressBook.addContact(contact3);
 
 myAddressBook.displayContacts();
 
-// Search for contacts in Delhi
-myAddressBook.searchByCity("Delhi");
+// View persons by City
+myAddressBook.viewPersonsByCity("Delhi");
 
-// Search for contacts in Maharashtra
-myAddressBook.searchByState("Maharashtra");
+// View persons by State
+myAddressBook.viewPersonsByState("Maharashtra");
